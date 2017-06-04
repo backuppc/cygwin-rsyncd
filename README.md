@@ -9,7 +9,8 @@ if you want to customize and build your own cygwin-rsyncd executable
 
 Thanks to Ray Frush, this distribution now comes with the NSIS installer,
 which wraps everything in a single .exe.  (See nsis.sourceforge.net.).
-This was based on the NSIS wrapper used by cwRsync.
+This was based on the NSIS wrapper used by cwRsync.  This particular
+version was updated by Yves Ouvrie.
 
 This distribution includes rsync 3.1.2, and a handful of cygwin 2.6.0
 libraries.  It was built using NSIS 3.0a0.
