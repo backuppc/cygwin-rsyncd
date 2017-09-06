@@ -3,7 +3,7 @@
 Download and run cygwin-rsyncd-3.1.2.1_installer.exe to install
 rsyncd on your WinXX client for doing BackupPC backups.
 
-Clone the git respository at https://github.com/backuppc/cygwin-rsyncd.git
+Clone the git repository at https://github.com/backuppc/cygwin-rsyncd.git
 if you want to customize and build your own cygwin-rsyncd executable
 (eg: presetting some configuration parameters for your site).
 
