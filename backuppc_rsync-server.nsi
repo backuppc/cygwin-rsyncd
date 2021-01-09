@@ -1,8 +1,9 @@
 ; Leveraged heavily from ITeF!x Consulting rsync-server.nsi 2.0.3 (https://www.itefix.no)
 ; Modifed by Ray Frush, Avago Technologies. ray.frush@avagotech.com
 
+Unicode True
 
-!define VERSION "3.1.2.1"
+!define VERSION "3.2.3.0"
 !define SVCNAME "RsyncServer"
 !define SVCUSR  "SvcRsync"
 !define PACKAGE "RsyncServer"

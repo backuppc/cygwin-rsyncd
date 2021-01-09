@@ -425,4 +425,3 @@ Source Definition referenced above.
 Red Hat sells a special Cygwin License for customers who are unable to provide
 their application in open source code form. For more information, please see: 
 http://www.redhat.com/software/tools/cygwin/, or call 866-2REDHAT ext. 3007 
-

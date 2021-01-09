@@ -1,21 +1,21 @@
-cygwin-rsyncd-3.1.2.1: Rsyncd for Cygwin
+cygwin-rsyncd-3.2.3.0: Rsyncd for Cygwin
 ========================================
 
-Download and run cygwin-rsyncd-3.1.2.1_installer.exe to install
+Download and run cygwin-rsyncd-3.2.3.0_installer.exe to install
 rsyncd on your WinXX client for doing BackupPC backups.
 
-Clone the git respository at https://github.com/backuppc/cygwin-rsyncd.git
-if you want to customize and build your own cygwin-rsyncd executable
-(eg: presetting some configuration parameters for your site).
+Download cygwin-rsyncd-3.2.3.0_source.zip if you want to customize
+and build your own cygwin-rsyncd executable (eg: presetting some
+configuration parameters for your site).
 
 Thanks to Ray Frush, this distribution now comes with the NSIS installer,
-which wraps everything in a single .exe.  (See nsis.sourceforge.net.).
+which wraps everything in a single .exe.  (See nsis.sourceforge.net.)
 This was based on the NSIS wrapper used by cwRsync.
 
-This distribution includes rsync 3.1.2, and a handful of cygwin 2.6.0
-libraries.  It was built using NSIS 3.0a0.
+This distribution includes rsync 3.2.3 and a handful of cygwin 3.1.7
+libraries.  It was built using NSIS 3.06.1.
 
-When you download and run cygwin-rsyncd-3.1.2.1_installer.exe, the
+When you download and run cygwin-rsyncd-3.2.3.0_installer.exe, the
 cygwin and rsync files are installed in c:\rsyncd.  A new windows
 service called RsyncServer is created and activated (ie: run).  The
 c:\rsyncd directory will have an uninstall executable which will
@@ -91,23 +91,25 @@ BUILDING A NEW NSIS WRAPPED EXECUTABLE
 ======================================
 
 The small tree of files to install, and the nsi script backuppc_rsync-server.nsi
-are available at https://github.com/backuppc/cygwin-rsyncd.git.  This isn't
+are available by downloading cygwin-rsyncd-3.2.3.0_source.zip.  This isn't
 program source code - it is the source tree that contains the executables
-and libraries for building cygwin-rsyncd-3.1.2.1_installer.exe.
+and libraries for building cygwin-rsyncd-3.2.3.0_installer.exe.
 
 If you want to change any of the installed files (eg: configuration files),
-perhaps with site-specific settings, then edit the files as necessary.
+perhaps with site-specific settings, then unzip the cygwin-rsyncd-3.2.3.0_source.zip
+and edit the files as necessary.
 
 To create the .exe installer, you will need to install NSIS from nsis.sourceforge.net.
 When you run NSIS, tell it to load/run the backuppc_rsync-server.nsi file, and it
-will create a .exe file that you can rename.  To avoid version confusion, you
-should use a different name or version from the standard distribution,
-cygwin-rsyncd-3.1.2.1_installer.exe.
+will create a .exe file that you can rename to cygwin-rsyncd-3.2.3.0_installer.exe.
+To avoid version confusion, you should use a different name or version from the
+standard distribution.
 
 LICENSE
 =======
 
-See license.txt for licenses for cwRsync, Cygwin and Rsync.
+The cygwin-rsyncd-3.2.3.0_source.zip contains a license.txt file
+that has the licenses for cwRsync, Cygwin, Rsync and Blat.
 
 If you install via the NSIS .exe wrapper, the license file will be
 C:\rsyncd\license.txt.
