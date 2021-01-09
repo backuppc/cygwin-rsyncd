@@ -1,6 +1,6 @@
 ## cygwin-rsyncd: Rsyncd for Cygwin
 
-Download and run cygwin-rsyncd-3.1.2.1_installer.exe to install
+Download and run cygwin-rsyncd-3.2.3.0_installer.exe to install
 rsyncd on your WinXX client for doing BackupPC backups.
 
 Clone the git repository at https://github.com/backuppc/cygwin-rsyncd.git
@@ -12,10 +12,10 @@ which wraps everything in a single .exe.  (See nsis.sourceforge.net.).
 This was based on the NSIS wrapper used by cwRsync.  This particular
 version was updated by Yves Ouvrie.
 
-This distribution includes rsync 3.1.2, and a handful of cygwin 2.6.0
-libraries.  It was built using NSIS 3.0a0.
+This distribution includes rsync 3.2.3 and a handful of cygwin 3.1.7
+libraries.  It was built using NSIS 3.06.1.
 
-When you download and run cygwin-rsyncd-3.1.2.1_installer.exe, the
+When you download and run cygwin-rsyncd-3.2.3.0_installer.exe, the
 cygwin and rsync files are installed in c:\rsyncd.  A new windows
 service called RsyncServer is created and activated (ie: run).  The
 c:\rsyncd directory will have an uninstall executable which will
@@ -89,7 +89,7 @@ see the BackupPC documentation:
 The small tree of files to install, and the nsi script backuppc_rsync-server.nsi
 are available at https://github.com/backuppc/cygwin-rsyncd.git.  This isn't
 program source code - it is the source tree that contains the executables
-and libraries for building cygwin-rsyncd-3.1.2.1_installer.exe.
+and libraries for building cygwin-rsyncd-3.2.3.0_installer.exe.
 
 If you want to change any of the installed files (eg: configuration files),
 perhaps with site-specific settings, then edit the files as necessary.
@@ -98,7 +98,7 @@ To create the .exe installer, you will need to install NSIS from nsis.sourceforg
 When you run NSIS, tell it to load/run the backuppc_rsync-server.nsi file, and it
 will create a .exe file that you can rename.  To avoid version confusion, you
 should use a different name or version from the standard distribution,
-cygwin-rsyncd-3.1.2.1_installer.exe.
+cygwin-rsyncd-3.2.3.0_installer.exe.
 
 ## License
 

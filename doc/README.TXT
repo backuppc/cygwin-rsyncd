@@ -109,7 +109,7 @@ LICENSE
 =======
 
 The cygwin-rsyncd-3.2.3.0_source.zip contains a license.txt file
-that has the licenses for cwRsync, Cygwin, Rsync and Blat.
+that has the licenses for cwRsync, Cygwin and Rsync.
 
 If you install via the NSIS .exe wrapper, the license file will be
 C:\rsyncd\license.txt.
