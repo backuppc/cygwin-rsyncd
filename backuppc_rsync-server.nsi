@@ -3,7 +3,7 @@
 
 Unicode True
 
-!define VERSION "3.2.3.0"
+!define VERSION "3.2.3.1"
 !define SVCNAME "RsyncServer"
 !define SVCUSR  "SvcRsync"
 !define PACKAGE "RsyncServer"
