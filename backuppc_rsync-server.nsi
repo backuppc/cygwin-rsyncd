@@ -47,9 +47,9 @@ var SystemDrive
 Function .onInit
 
 	ReadEnvStr $SystemDrive SYSTEMDRIVE
-        StrCpy $INSTDIR '$SystemDrive\rsyncd'
+	StrCpy $INSTDIR '$SystemDrive\rsyncd'
 
-        StrCpy $installtype "fresh"
+	StrCpy $installtype "fresh"
 
 ;	Init_Cont_A:
 ;	# Check if icw base is installed 
@@ -200,7 +200,7 @@ Function SetupService
 	nsExec::ExecToLog '"$INSTDIR\bin\cygrunsrv" -I ${SVCNAME} -c "$INSTDIR" -p "$INSTDIR\bin\rsync.exe" -a "--config rsyncd.conf --daemon --no-detach" -o -t auto -e "CYGWIN=nontsec binmode" -1 "$INSTDIR\rsyncd-stdin.log" -2 "$INSTDIR\rsyncd-stderr.log" -y "tcpip" -f "Rsync - open source utility that provides fast incremental file transfer"'
  	nsExec::ExecToLog '"$INSTDIR\bin\cygrunsrv" --verbose --start ${SVCNAME}'
  	nsExec::ExecToLog '"$INSTDIR\bin\cygrunsrv" --verbose --query ${SVCNAME}'
-        nsExec::Exec '"$INSTDIR\bin\notify.bat"'
+	nsExec::Exec '"$INSTDIR\bin\notify.bat"'
 
 ;	DetailPrint "Granting service account full permission on the installation directory"
 ;	nsExec::ExecToLog '"$INSTDIR\bin\xcacls" "$INSTDIR" /T /E /G $svcuser:C /Y'
@@ -243,10 +243,15 @@ Function InstallFiles
 	File /oname=$INSTDIR\bin\cygpopt-0.dll bin\cygpopt-0.dll
 	File /oname=$INSTDIR\bin\cygrunsrv.exe bin\cygrunsrv.exe
 	File /oname=$INSTDIR\bin\cygwin1.dll bin\cygwin1.dll
+	File /oname=$INSTDIR\bin\cyglz4-1.dll bin\cyglz4-1.dll
+	File /oname=$INSTDIR\bin\cygzstd-1.dll bin\cygzstd-1.dll
+	File /oname=$INSTDIR\bin\cygxxhash-0.dll bin\cygxxhash-0.dll
+	File /oname=$INSTDIR\bin\cygcrypto-1.1.dll bin\cygcrypto-1.1.dll
+	File /oname=$INSTDIR\bin\cygz.dll bin\cygz.dll
 	File /oname=$INSTDIR\bin\rsync.exe bin\rsync.exe
 
 	SetOutPath "$INSTDIR\etc"
-	File /oname=$INSTDIR\etc\fstab etc\fstab        
+	File /oname=$INSTDIR\etc\fstab etc\fstab
 	
 	SetOutPath "$INSTDIR\doc"
 	File /oname=$INSTDIR\doc\README.TXT doc\README.TXT
@@ -267,6 +272,11 @@ Function un.DeleteFiles
 
 	Delete $INSTDIR\bin\cygiconv-2.dll
 	Delete $INSTDIR\bin\cygpopt-0.dll
+	Delete $INSTDIR\bin\cyglz4-1.dll
+	Delete $INSTDIR\bin\cygzstd-1.dll
+	Delete $INSTDIR\bin\cygxxhash-0.dll
+	Delete $INSTDIR\bin\cygcrypto-1.1.dll
+	Delete $INSTDIR\bin\cygz.dll
 	Delete $INSTDIR\bin\cygrunsrv.exe
 	Delete $INSTDIR\bin\cygwin1.dll
 	Delete $INSTDIR\bin\rsync.exe
