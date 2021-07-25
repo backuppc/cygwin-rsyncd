@@ -56,6 +56,17 @@ to use Cygwin then use the setup.exe program at http://cygwin.com,
 and don't use the cygwin1.dll from this installation.  You can
 easily install rsync from the Cygwin installer.
 
+If you take this option you will need to set up rsync as a service yourself,
+so that it gets started after a system reboot.
+You will need to start a 'cmd' window as the administrator.
+The commands you will need to run will look something like this:
+```
+c:\ cygrunsrv --intall 'rsyncd' --path /usr/bin/rsync \
+ --args '--daemon --no-detach' --type auth --disp 'Rsync Daemon' \
+ --desc 'Starts an rsync daemon listening for incoming connections'
+ c:\ net start rsyncd
+```
+
 ## Setting Up BackupPC To Use Windows rsyncd
 
 The following options will have to be set in either the global
